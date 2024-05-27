@@ -993,7 +993,7 @@ img {
 
 .footer_bottom span a {
     display: inline-block;
-    color: #df0031;
+    color: #b30c0c;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -1001,7 +1001,8 @@ img {
 }
 
 .footer_bottom span a:hover {
-    color: #fff;
+    
+    color: #fffefe;
 }
 
 /* Animation Timers
