@@ -13,24 +13,24 @@
                              <form action="{%url 'UserLoginCheck'%}" method="post">
                         {%csrf_token%}
 
-                        <div id="div_id_username" class="form-group"><label for="id_username" class=" requiredField">
+                        <div id="div_id_username" class="form-group"><label for="id_username" class=" requiredField custom-label">
                             Username<span class="asteriskField">*</span> </label>
                             <div><input type="text" name="loginname" required autofocus autocapitalize="none"
                                         autocomplete="username" maxlength="150" class="textinput textInput form-control"
                                         required id="id_username"></div>
                         </div>
-                        <div id="div_id_password" class="form-group"><label for="id_password" class=" requiredField">
+                        <div id="div_id_password" class="form-group"><label for="id_password" class=" requiredField custom-label">
                             Password<span class="asteriskField">*</span> </label>
                             <div><input type="password" name="pswd" required autocomplete="current-password"
                                         class="textinput textInput form-control" required id="id_password"></div>
                         </div>
 
-                        <button type="submit" class="btn btn-dark mb-2">Login</button>
+                        <button type="submit" class="btn btn-dark mb-6">Login</button>
 
                     </form>
                     {% if messages %}
                     {% for message in messages %}
-                    <font color='RED'> {{ message }}</font>
+                    <font  color='Blue'> {{ message }}</font>
                     {% endfor %}
                     {% endif %}
                         </div>
@@ -44,5 +44,13 @@
     </div>
 </section>
 <!--Hero_Section-->
+<style>
+    .custom-label {
+    color: #ffffff; /* Change this to the desired color */
+}
+button{
+    color: black;
+}
 
+</style>
 {%endblock%}

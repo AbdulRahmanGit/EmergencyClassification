@@ -12,18 +12,17 @@
                             alt=""></div>
                     <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
                         <div class=" delay-01s animated fadeInDown wow animated">
-                            <p>
-
-                                <title>Registration Form</title>
+                           
                                 <style>
                                     body {
-                                        background-color: #ca1f1f; /* Red background */
-                                        font-family: Arial, sans-serif;
+                                        background: #cb2026; /* Red background */
+                                        font-family: 'Lucida Sans', sans-serif;
                                     }
+                                
                                     .aligncenter {
                                         text-align: center;
                                         margin-bottom: 20px;
-                                        color: white;
+                                        color: rgb(0, 0, 0);
                                     }
                                     form {
                                         background-color: #ffffff;
@@ -40,6 +39,7 @@
                                     td {
                                         padding: 10px;
                                         border-bottom: 1px solid #ddd;
+                                        color: black;
                                     }
                                     td:first-child {
                                         font-weight: bold;
@@ -93,12 +93,22 @@
                                             <td>State</td>
                                             <td>{{ form.state }}</td>
                                         </tr>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td style="color:black">{{form.status}} {% if messages %}
+                                                {% for message in messages %}
+                                                <font color='Blue'> {{ message }}</font>
+                                                {% endfor %}
+                                                {% endif %}
+ </td>
+                                        </tr>
                                             <td colspan="5" class="btn-center">
                                                 <button class="btn btn-block btn-primary text-white py-3 px-5"type="submit">
                                                 Register
                                         </button></td>
                                     </table>
                                 </form>
+                                
                             </p>
                         </div>
 

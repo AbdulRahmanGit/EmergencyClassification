@@ -3,11 +3,10 @@
 
 <section id="intro">
     <div class="container intro-text">
-        <footer class="footer_wrapper" id="contact">
-            <div class="container">
-                <section class="page_section contact" id="contact">
-                    <p>
-                    <h3 align ="center" style="color:white;">View RegisterUser Details</h3></p><br>
+        <div class="container">
+            <section class="page_section contact" id="contact">
+                <p>
+                    <h3 align ="center" style="color:white;">Registered  User Details</h3></p><br>
                     <table class="table table-bordered bg-light text-dark">
                         <thead>
                         <tr style="color:rgb(255, 255, 255);font-weight:bold;">
@@ -33,7 +32,7 @@
                             <td>{{i.status}}</td>
                             {% if i.status == 'waiting' %}
                             <td><a class="btn-link" href="/AdminActivaUsers/?uid={{ i.id }}"
-                                   style="color:DARKBLUE">Activate</a></td>
+                                   style="color:rgb(242, 255, 1)">Activate</a></td>
                             {% else %}
                             <td> Activated</td>
                             {% endif %}
@@ -44,8 +43,20 @@
                     </table>
                 </section>
             </div>
+            <footer class="footer_wrapper" id="contact">
         </footer>
     </div>
+    <style>
+        
+        .container {
+           padding-left: 0;}
+        .btn-link{
+            color: green;}
+            .contact{
+            margin-top: 10%;
+        }
+
+    </style>
 
 </section>
 
