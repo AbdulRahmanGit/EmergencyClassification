@@ -1,27 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "EmergencyClassification/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.7",
-        "includeFiles": ["path0/requirements.txt"],
-        "installCommand": "apt-get update && apt-get install -y python3-distutils && pip install --upgrade setuptools && pip install --upgrade pip && pip install -r requirements.txt",
-        "buildCommand": "pip install --upgrade pip && apt-get update && apt-get install -y python3-distutils && pip install --disable-pip-version-check --target . --upgrade -r requirements.txt"
-      }
-    }
-  ],
-  "build": {
-    "env": {
-      "PYTHON_VERSION": "3.7"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "EmergencyClassification/wsgi.py"
-    }
-  ]
+    "builds": [{
+        "src": "EmergencyClassification/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "EmergencyClassification/wsgi.py"
+        }
+    ]
 }
