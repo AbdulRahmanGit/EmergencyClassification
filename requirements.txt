@@ -2,6 +2,7 @@
 Django==4.0
 djangorestframework==3.11.0
 python-dateutil == 2.82
+setuptools
 # Machine Learning & Data Science
 numpy==1.23.1
 pandas==1.5.3
