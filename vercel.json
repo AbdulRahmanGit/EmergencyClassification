@@ -1,20 +1,27 @@
 {
-    "builds": [
-        
-        {
-            "src": "EmergencyClassification/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "500mb",
-                "runtime": "python3.9"
-              
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "EmergencyClassification/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "EmergencyClassification/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb",  // While this option exists, note that Vercel's 250 MB limit is enforced by AWS
+        "runtime": "python3.9",
+        "includeFiles": [
+          "EmergencyClassification/**",
+          "requirements.txt"
+        ],
+        "excludeFiles": [
+          "tests/**",
+          "docs/**",
+          "**/*.md"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "EmergencyClassification/wsgi.py"
+    }
+  ]
 }
