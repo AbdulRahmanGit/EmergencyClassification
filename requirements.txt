@@ -1,13 +1,13 @@
-Django
+Django==5.0.6
 djangorestframework
-setuptools
+setuptools==70.0.0
 # Machine Learning & Data Science
 numpy
 pandas
 scikit-learn
 scipy
 joblib
-wheel
+wheel==0.43.0
 # Utilities
 requests
 pillow
