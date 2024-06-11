@@ -1,9 +1,6 @@
 {
     "builds": [
-        { 
-            "src": "Pipfile", 
-            "use": "@vercel/static-build" 
-        },
+        
         {
             "src": "EmergencyClassification/wsgi.py",
             "use": "@vercel/python",
