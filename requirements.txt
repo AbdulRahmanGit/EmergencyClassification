@@ -1,42 +1,42 @@
-pandas==1.5.3
-numpy==1.23.1
-scikit-learn==1.1.2
-xgboost==1.7.6
-catboost==1.2.2
-lightgbm==4.1.0
+pandas
+numpy
+scikit-learn
+xgboost
+catboost
+lightgbm
 
 
-tensorflow==2.13.0
-torch==2.1.1
-keras==2.13.1
+tensorflow
+torch
+keras
 
-albumentations==1.3.1
-imgaug==0.4.0
-opencv-python==4.1.2.30
-
-
-matplotlib==3.7.2
-seaborn==0.12.2
-plotly==5.18.0
-yellowbrick==1.5
-shap==0.42.1
+albumentations
+imgaug
+opencv-python
 
 
-nltk==3.8.1
-transformers==4.30.2
+matplotlib
+seaborn
+plotly
+yellowbrick
+shap
 
 
-Django==4.0
-djangorestframework==3.11.0
-
- Operationsfastapi==0.101.0
-uvicorn==0.23.2
-aiohttp==3.8.5
+nltk
+transformers
 
 
-scipy==1.10.1
-joblib==1.3.1
-h5py==3.9.0
+Django
+djangorestframework
+
+ Operationsfastapi
+uvicorn
+aiohttp
+
+
+scipy
+joblib
+h5py
 
 
 gunicorn
