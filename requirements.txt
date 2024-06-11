@@ -1,15 +1,13 @@
-asgiref
 Django
-setuptools
-sqlparse
-tzdata
-wheel
 djangorestframework
+setuptools
+# Machine Learning & Data Science
 numpy
 pandas
 scikit-learn
 scipy
 joblib
+wheel
+# Utilities
 requests
 pillow
-
