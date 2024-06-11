@@ -4,7 +4,7 @@
       "src": "EmergencyClassification/wsgi.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "50mb",  // While this option exists, note that Vercel's 250 MB limit is enforced by AWS
+        "maxLambdaSize": "50mb",
         "runtime": "python3.9",
         "includeFiles": [
           "EmergencyClassification/**",
