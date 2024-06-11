@@ -5,7 +5,7 @@
             "src": "EmergencyClassification/wsgi.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "100mb",
+                "maxLambdaSize": "500mb",
                 "runtime": "python3.9"
               
             }
