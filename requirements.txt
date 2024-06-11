@@ -29,7 +29,7 @@ transformers
 Django
 djangorestframework
 
- Operationsfastapi
+
 uvicorn
 aiohttp
 
