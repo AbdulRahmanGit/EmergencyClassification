@@ -1,13 +1,9 @@
 #!/bin/bash
-
-# Install Python dependencies from requirements.txt
-pip install -r requirements.txt
-
-# Collect static files for deployment
-python3.12 manage.py collectstatic --noinput
-
-# Create database migrations based on changes in models
-python3.12 manage.py makemigrations
-
-# Apply database migrations to the database
-python3.12 manage.py migrate
+echo "Python version:"
+python3 --version
+echo "Pip version:"
+pip3 --version
+pip3 install -r requirements.txt
+python3 manage.py collectstatic --noinput
+python3 manage.py makemigrations
+python3 manage.py migrate
