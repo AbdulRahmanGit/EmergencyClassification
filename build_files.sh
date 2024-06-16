@@ -1,5 +1,13 @@
+#!/bin/bash
+
+# Install Python dependencies from requirements.txt
 pip install -r requirements.txt
-python manage.py collectstatic
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+
+# Collect static files for deployment
+python3.12 manage.py collectstatic --noinput
+
+# Create database migrations based on changes in models
+python3.12 manage.py makemigrations
+
+# Apply database migrations to the database
+python3.12 manage.py migrate
