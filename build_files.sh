@@ -1,5 +1,6 @@
 #!/bin/bash
 pip install -r requirements.txt
-python3.12 manage.py collectstatic --noinput
-python3.12 manage.py makemigrations
-python3.12 manage.py migrate
+python manage.py collectstatic
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
