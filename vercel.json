@@ -1,24 +1,27 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "EmergencyClassification/wsgi.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.12",
-        "includeFiles": [
-          "EmergencyClassification/**",
-          "requirements.txt"
-        ],
-        "excludeFiles": [
-          "tests/**",
-          "docs/**",
-          "**/*.md"
-        ]
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles_build"
       }
     }
   ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "EmergencyClassification/wsgi.py"

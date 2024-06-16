@@ -15,12 +15,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
+from django.conf import settings
 from EmergencyClassification import views as mainView
 from admins import views as admins
 from users import views as usr
-
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", mainView.index, name='index'),
@@ -46,3 +46,5 @@ urlpatterns = [
     path("adminResults/", admins.adminResults, name="adminResults"),
 
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

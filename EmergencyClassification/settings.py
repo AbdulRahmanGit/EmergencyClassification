@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s3mmq+%zk88x72j($iv7e#f5xr4_y*ip1#^b!km=fb^lxwj9$0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
 
 # Application definition
@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'EmergencyClassification.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'GdhwyQBGLoXtbsmCTcjfsBXaDQfkqMrt',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '10546',
+
     }
 }
 
