@@ -1,42 +1,20 @@
-pandas
-numpy
-scikit-learn
-xgboost
-catboost
-lightgbm
+# Web Development
+Django==4.0
+djangorestframework==3.11.0
+python-dateutil==2.8.1
+setuptools
+# Machine Learning & Data Science
+numpy==1.23.1
+pandas==1.5.3
+scikit-learn==1.1.2
+scipy==1.10.1
+joblib==1.3.1
 
+# Utilities
+requests==2.31.0
+pillow==10.0.0
+psycopg2==2.9.7  # Change this based on the database you're using
 
-tensorflow
-torch
-keras
-
-albumentations
-imgaug
-opencv-python
-
-
-matplotlib
-seaborn
-plotly
-yellowbrick
-shap
-
-
-nltk
-transformers
-
-
-Django
-djangorestframework
-
-
-uvicorn
-aiohttp
-
-
-scipy
-joblib
-h5py
-
-
-gunicorn
+# Optional for Utility and Debugging
+matplotlib==3.7.2
+seaborn==0.12.2
