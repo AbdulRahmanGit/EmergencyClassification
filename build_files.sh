@@ -1,9 +1,20 @@
 #!/bin/bash
-echo "Python version:"
-python3 --version
-echo "Pip version:"
-pip3 --version
-pip3 install -r requirements.txt
-python3 manage.py collectstatic --noinput
-python3 manage.py makemigrations
-python3 manage.py migrate
+
+# Create and activate virtual environment
+python3.12 -m venv myenv
+source myenv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Collect static files
+python3.12 manage.py collectstatic --noinput
+
+# Make migrations
+python3.12 manage.py makemigrations
+
+# Apply migrations
+python3.12 manage.py migrate
+
+# Deactivate virtual environment (optional)
+deactivate
