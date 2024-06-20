@@ -1,9 +1,9 @@
 import pandas as pd  # for data manipulation
 from django.conf import settings
-
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
-
+import pickle
+import os
 path = settings.MEDIA_ROOT + "//" + "EmmergencyDataset.csv"
 df = pd.read_csv(path)
 X = df.iloc[:, :-1].values
@@ -21,15 +21,16 @@ def process_randomForest():
     clf = RandomForestClassifier()
     clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
-    # import pickle
+    
     # # now you can save it to a file
-    # with open(r'alexmodel.pkl', 'wb') as f:
-    #     pickle.dump(clf, f)
+    
     print(clf.score(X_test, y_test))
     rf_report = metrics.classification_report(y_test, y_pred, output_dict=True)
     print("Classification report for - \n{}:\n{}\n".format(clf, rf_report))
+    model_file = os.path.join(settings.MEDIA_ROOT, 'alexmodel.pkl')
+    with open(model_file, 'wb') as f:
+        pickle.dump(clf, f)
     return rf_report
-
 
 def process_decesionTree():
     from sklearn.tree import DecisionTreeClassifier
@@ -66,7 +67,7 @@ def process_knn():
 
 def process_LogisticRegression():
     from sklearn.linear_model import LogisticRegression
-    clf = LogisticRegression()
+    clf = LogisticRegression(solver='liblinear')
     clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
     print(clf.score(X_test, y_test))
