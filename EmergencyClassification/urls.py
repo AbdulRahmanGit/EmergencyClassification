@@ -20,7 +20,8 @@ from django.urls import path
 from EmergencyClassification import views as mainView
 from admins import views as admins
 from users import views as usr
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", mainView.index, name='index'),
