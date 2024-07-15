@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
-import dj_database_url
 import environ 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,7 +86,13 @@ DATABASES = {
 }
 '''
 DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+    'default': {'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'GdhwyQBGLoXtbsmCTcjfsBXaDQfkqMrt',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '10546',
+    }
 }
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
