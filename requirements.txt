@@ -1,5 +1,6 @@
 awsebcli
 django
+setuptools
 asgiref
 cement==2.8.2
 certifi
